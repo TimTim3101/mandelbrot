@@ -35,7 +35,6 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
     static bool wasPressed = false;
     bool isPressed = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS;
     if (isPressed && !wasPressed) {
-        //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
         lastMouseX = xpos;
         lastMouseY = ypos;
     }
@@ -50,7 +49,6 @@ void mouse_callback(GLFWwindow* window, double xpos, double ypos) {
         lastMouseX = xpos;
         lastMouseY = ypos;
     }
-    //glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
     wasPressed = isPressed;
 
     mouseX = xpos;
@@ -69,7 +67,7 @@ int main() {
     Window window(WIN_WIDTH, WIN_HEIGHT, "Mandelbrot");
 
     // Loading window icon
-    window.SetIcon(window.get(), "window/icon.png");
+    window.SetIcon(window.get(), "../window/icon.png");
 
     GLuint VAO, VBO;
 
@@ -85,7 +83,7 @@ int main() {
     glEnableVertexAttribArray(0);
 
     // Init shaders
-    Shader shader("shaders/shader.vert", "shaders/shader.frag");
+    Shader shader("../shaders/shader.vert", "../shaders/shader.frag");
 
     // Callbacks
     glfwSetFramebufferSizeCallback(window.get(), framebuffer_size_callback);
