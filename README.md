@@ -1,6 +1,6 @@
 # Mandelbrot Viewer
 
-An interactive viewer of the Mandelbrot set in C++ and OpenGL
+An interactive viewer of the Mandelbrot set in C++ and OpenGL.
 
 The project includes:
 - smoothly scale a fractal (zoom to cursor position)
@@ -45,7 +45,7 @@ mkdir build
 cd build
 cmake ..
 make
-
+```
 ./mandelbrot
 ```
 
