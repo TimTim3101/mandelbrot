@@ -45,8 +45,5 @@ mkdir build
 cd build
 cmake ..
 make
-```
 ./mandelbrot
 ```
-
-P.S. This is my first fully completed C++ project.
